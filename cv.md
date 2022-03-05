@@ -1,5 +1,7 @@
 # **Pavel Zabalotny**
 
+[![Codewars Profile Badges](https://www.codewars.com/users/PavelZabalotny/badges/large)](https://www.codewars.com/users/PavelZabalotny/badges/large)
+
 * Email: *PavelZabalotny@gmail.com*
 * Telegram: *@PavelZab*
 * Discord: *PavelZabolotny#8875*
