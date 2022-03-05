@@ -47,4 +47,24 @@ const countBits = n => n.toString(2).split('').filter(v => v == 1).length
 
 ---
 
+## Work Experience
 
+* [NuclearPool.by](https://nuclearpool.by) - official website of the Belarusian Nuclear Insurance Pool (CMS Wordpress)
+* [Task manager](https://github.com/PavelZabalotny/test-2018-task-manager) using React and Redux
+* [Test task](https://github.com/PavelZabalotny/test-2017) using React
+* [Portfolio task](https://rolling-scopes-school.github.io/pavelzabalotny-JSFEPRESCHOOL/portfolio/) - RS School stage 0 task using Javascript, HTML and CSS
+* [Dota 2 memory game](https://rolling-scopes-school.github.io/pavelzabalotny-JSFEPRESCHOOL/dota-2-memory-game/) - RS School stage 0 task using Javascript, HTML and SCSS
+
+---
+
+## Language skills
+
+* English: Intermediate (Streamline 2021), Pre-Intermediate (Streamline 2020)
+* Russian: Native speaker
+
+---
+
+## Hobbies
+* Football
+* Volleyball
+* Table tennis
