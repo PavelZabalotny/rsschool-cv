@@ -1,0 +1,79 @@
+@import "constants";
+
+.main {
+  display: flex;
+  flex: 1 0 auto;
+
+  .wrapper {
+    @extend .container;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+
+    .hero {
+      display: flex;
+      padding: 3rem 2rem 3rem 4rem;
+      background-color: $hero_color;
+
+      .avatar {
+        width: 218px;
+        flex-shrink: 0;
+        margin-right: 4rem;
+
+        img {
+          margin: 0 auto;
+          border: $avatar_border solid $name_color;
+        }
+      }
+
+      .hero__info {
+        .hero__name {
+          color: $name_color;
+          font-family: $font_title;
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          line-height: 3rem;
+          letter-spacing: 0.3rem;
+          margin-bottom: 0.5rem;
+
+          span {
+            display: block;
+          }
+        }
+
+        .hero__position {
+          color: $white;
+          text-transform: uppercase;
+          font-family: $font_title;
+          font-size: 1.5rem;
+          letter-spacing: 0.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .hero__about {
+        color: $white;
+        font-size: 0.875rem;
+      }
+    }
+
+    .main-section {
+      display: flex;
+      height: 100%;
+
+      .section_contacts {
+        width: $left-section;
+        background-color: rgba(204, 204, 204, 0.35);
+        color: $white;
+        flex: 1 0 auto;
+        height: 100%;
+      }
+
+      .section_skills {
+        width: $right-section;
+        flex: 1 0 auto;
+      }
+    }
+  }
+}
