@@ -49,6 +49,15 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a {
+  color: blue;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: #9999ff;
+}
+
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
@@ -92,11 +101,12 @@ select {
   background-color: #222A35;
 }
 .main .wrapper .hero .avatar {
+  position: relative;
   width: 218px;
   flex-shrink: 0;
   margin-right: 4rem;
 }
-.main .wrapper .hero .avatar img {
+.main .wrapper .hero .avatar .avatar__img {
   margin: 0 auto;
   border: 5px solid #FFCC01;
 }
@@ -118,6 +128,7 @@ select {
   text-transform: uppercase;
   font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
+  font-weight: normal;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
 }
@@ -128,15 +139,157 @@ select {
 .main .wrapper .main-section {
   display: flex;
   height: 100%;
+  background-color: #f7f8ff;
 }
-.main .wrapper .main-section .section_contacts {
+.main .wrapper .main-section .section-left {
   width: 36%;
-  background-color: rgba(204, 204, 204, 0.35);
-  color: #ffffff;
   flex: 1 0 auto;
   height: 100%;
+  padding-bottom: 2rem;
 }
-.main .wrapper .main-section .section_skills {
+.main .wrapper .main-section section.education,
+.main .wrapper .main-section section.language,
+.main .wrapper .main-section section.contacts,
+.main .wrapper .main-section section.hobbies,
+.main .wrapper .main-section section.skills {
+  margin: 2rem 2rem 0 2rem;
+}
+.main .wrapper .main-section section.education .section__title,
+.main .wrapper .main-section section.language .section__title,
+.main .wrapper .main-section section.contacts .section__title,
+.main .wrapper .main-section section.hobbies .section__title,
+.main .wrapper .main-section section.skills .section__title {
+  position: relative;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.375rem;
+  color: #363636;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  margin-bottom: 3rem;
+}
+.main .wrapper .main-section section.education .section__title::after,
+.main .wrapper .main-section section.language .section__title::after,
+.main .wrapper .main-section section.contacts .section__title::after,
+.main .wrapper .main-section section.hobbies .section__title::after,
+.main .wrapper .main-section section.skills .section__title::after {
+  content: "";
+  width: 2.5rem;
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  border: 2px solid #ffcc01;
+}
+.main .wrapper .main-section section.education .section__items,
+.main .wrapper .main-section section.language .section__items,
+.main .wrapper .main-section section.contacts .section__items,
+.main .wrapper .main-section section.hobbies .section__items,
+.main .wrapper .main-section section.skills .section__items {
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
+.main .wrapper .main-section section.education .section__items .section__item,
+.main .wrapper .main-section section.language .section__items .section__item,
+.main .wrapper .main-section section.contacts .section__items .section__item,
+.main .wrapper .main-section section.hobbies .section__items .section__item,
+.main .wrapper .main-section section.skills .section__items .section__item {
+  margin-top: 0.5rem;
+  line-height: 1rem;
+}
+.main .wrapper .main-section section.education .hobbies__icons,
+.main .wrapper .main-section section.language .hobbies__icons,
+.main .wrapper .main-section section.contacts .hobbies__icons,
+.main .wrapper .main-section section.hobbies .hobbies__icons,
+.main .wrapper .main-section section.skills .hobbies__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main .wrapper .main-section section.education .hobbies__icons .football,
+.main .wrapper .main-section section.language .hobbies__icons .football,
+.main .wrapper .main-section section.contacts .hobbies__icons .football,
+.main .wrapper .main-section section.hobbies .hobbies__icons .football,
+.main .wrapper .main-section section.skills .hobbies__icons .football {
+  background: url(../assets/icons/football-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .ping-pong,
+.main .wrapper .main-section section.language .hobbies__icons .ping-pong,
+.main .wrapper .main-section section.contacts .hobbies__icons .ping-pong,
+.main .wrapper .main-section section.hobbies .hobbies__icons .ping-pong,
+.main .wrapper .main-section section.skills .hobbies__icons .ping-pong {
+  background: url(../assets/icons/ping-pong-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .snooker,
+.main .wrapper .main-section section.language .hobbies__icons .snooker,
+.main .wrapper .main-section section.contacts .hobbies__icons .snooker,
+.main .wrapper .main-section section.hobbies .hobbies__icons .snooker,
+.main .wrapper .main-section section.skills .hobbies__icons .snooker {
+  background: url(../assets/icons/snooker-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .boxing,
+.main .wrapper .main-section section.language .hobbies__icons .boxing,
+.main .wrapper .main-section section.contacts .hobbies__icons .boxing,
+.main .wrapper .main-section section.hobbies .hobbies__icons .boxing,
+.main .wrapper .main-section section.skills .hobbies__icons .boxing {
+  background: url(../assets/icons/boxing-gloves-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .snowboard,
+.main .wrapper .main-section section.language .hobbies__icons .snowboard,
+.main .wrapper .main-section section.contacts .hobbies__icons .snowboard,
+.main .wrapper .main-section section.hobbies .hobbies__icons .snowboard,
+.main .wrapper .main-section section.skills .hobbies__icons .snowboard {
+  background: url(../assets/icons/snowboard-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .chess,
+.main .wrapper .main-section section.language .hobbies__icons .chess,
+.main .wrapper .main-section section.contacts .hobbies__icons .chess,
+.main .wrapper .main-section section.hobbies .hobbies__icons .chess,
+.main .wrapper .main-section section.skills .hobbies__icons .chess {
+  background: url(../assets/icons/chesspiece-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .bicycle,
+.main .wrapper .main-section section.language .hobbies__icons .bicycle,
+.main .wrapper .main-section section.contacts .hobbies__icons .bicycle,
+.main .wrapper .main-section section.hobbies .hobbies__icons .bicycle,
+.main .wrapper .main-section section.skills .hobbies__icons .bicycle {
+  background: url(../assets/icons/bicycle-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .ice-skating,
+.main .wrapper .main-section section.language .hobbies__icons .ice-skating,
+.main .wrapper .main-section section.contacts .hobbies__icons .ice-skating,
+.main .wrapper .main-section section.hobbies .hobbies__icons .ice-skating,
+.main .wrapper .main-section section.skills .hobbies__icons .ice-skating {
+  background: url(../assets/icons/ice-skating-shoes-64.png);
+}
+.main .wrapper .main-section section.education .hobbies__icons .icon,
+.main .wrapper .main-section section.language .hobbies__icons .icon,
+.main .wrapper .main-section section.contacts .hobbies__icons .icon,
+.main .wrapper .main-section section.hobbies .hobbies__icons .icon,
+.main .wrapper .main-section section.skills .hobbies__icons .icon {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  background-size: cover;
+}
+.main .wrapper .main-section section.contacts .section__items .section__item {
+  margin-top: 1rem;
+  white-space: pre-line;
+}
+.main .wrapper .main-section section.skills .section__items .section__item {
+  display: inline-block;
+  background: #FFCC01;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  padding: 1rem 1.25rem;
+  margin-right: 0.125rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.main .wrapper .main-section .section-right {
   width: 64%;
   flex: 1 0 auto;
 }
@@ -146,13 +299,21 @@ body {
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  color: #555555;
 }
 
 .container, .header .wrapper,
 .footer .wrapper, .main .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  outline: 1px solid gold;
+}
+
+.header,
+.footer {
+  visibility: hidden;
+}
+.fw-500 {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

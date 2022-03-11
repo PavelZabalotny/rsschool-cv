@@ -48,6 +48,17 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a {
+  color: blue;
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:hover {
+    color: lighten(blue, 30%);
+  }
+}
+
+
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
