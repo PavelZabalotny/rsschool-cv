@@ -1,0 +1,31 @@
+//@import "normalize.css";
+@import "reset";
+@import "constants";
+@import "main";
+//@import "fonts";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $font_common;
+  font-weight: 400;
+  color: $main_color;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  //outline: 1px solid gold;
+}
+
+.header,
+.footer {
+  visibility: hidden;
+  .wrapper {
+    @extend .container;
+  }
+}
+
+.fw-500 {
+  font-weight: 500;
+}
